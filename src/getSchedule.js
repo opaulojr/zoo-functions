@@ -60,7 +60,7 @@ const getSchedule = (scheduleTarget) => {
     return { [scheduleTarget]: daySchedule };
   }
 
-  if (typeof scheduleTarget === 'string') {
+  if (typeof scheduleTarget === 'string') { // test here
     const animalSchedule = getAnimalSchedule(scheduleTarget);
     if (animalSchedule.length > 0) {
       return animalSchedule;

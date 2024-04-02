@@ -8,7 +8,6 @@ const employees = [
   'c5b83cb3-a451-49e2-ac45-ff3f54fbe7e1',
   burlId,
   olaId,
-  '56d43ba3-a5a7-40f6-8dd7-cbb05082383f',
   stephanieId,
   '4b40a139-d4dc-4f09-822d-ec25e819a5ad',
   'c1f50212-35a6-4ecd-8223-f835538526c2',
@@ -21,7 +20,6 @@ describe('10 - Implemente a função `getOldestFromFirstSpecies` para encontrar 
       ['Maxwell', 'male', 15],
       ['Maxwell', 'male', 15],
       ['Margherita', 'female', 10],
-      ['Bill', 'male', 6],
       ['Margherita', 'female', 10],
       ['Margherita', 'female', 10],
       ['Shu', 'female', 19],
@@ -32,5 +30,21 @@ describe('10 - Implemente a função `getOldestFromFirstSpecies` para encontrar 
       const actual = getOldestFromFirstSpecies(employeeId);
       expect(actual).toEqual(expected[index]);
     });
+  });
+
+  it('retorna mensagem apropriada quando o ID do funcionário não é encontrado', () => {
+    const nonExistentEmployeeId = 'non-existent-employee-id';
+
+    const actual = getOldestFromFirstSpecies(nonExistentEmployeeId);
+    const expected = 'Funcionário não encontrado.';
+    expect(actual).toEqual(expected);
+  });
+
+  it('retorna mensagem apropriada quando não há residentes na espécie', () => {
+    const employeeWithEmptySpeciesId = '56d43ba3-a5a7-40f6-8dd7-cbb05082383f';
+
+    const actual = getOldestFromFirstSpecies(employeeWithEmptySpeciesId);
+    const expected = 'Não há residentes nesta espécie.';
+    expect(actual).toEqual(expected);
   });
 });

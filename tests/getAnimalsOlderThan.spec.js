@@ -1,6 +1,12 @@
 const getAnimalsOlderThan = require('../src/getAnimalsOlderThan');
 
 describe('2 - Implemente a função `getAnimalsOlderThan` que verifica se todos os animais de uma espécie possuem a idade mínima especificada', () => {
+  it('se nenhum parâmetro for passado, retorna false', () => {
+    const actual = getAnimalsOlderThan();
+    const expected = false;
+    expect(actual).toEqual(expected);
+  });
+
   it('ao passar o nome de uma espécie e uma idade, testa se todos os animais desta espécie possuem a idade mínima especificada', () => {
     {
       const actual = getAnimalsOlderThan('otters', 7);

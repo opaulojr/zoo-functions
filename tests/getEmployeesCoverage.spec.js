@@ -100,4 +100,8 @@ describe('11 - Implemente a função `getEmployeesCoverage` para retornar as inf
   it('caso não haja nenhuma pessoa com o nome ou id especificados deverá ser lançado um error', () => {
     expect(() => getEmployeesCoverage({ id: 'Id inválido' })).toThrow(/^Informações inválidas$/);
   });
+
+  it('lança um erro se um parâmetro inválido é fornecido', () => {
+    expect(() => getEmployeesCoverage({ invalidParam: 'valor' })).toThrow(/^Informações inválidas$/);
+  });
 });

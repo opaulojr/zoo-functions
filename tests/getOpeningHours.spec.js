@@ -1,4 +1,4 @@
-const getOpeningHours = require('../src/getOpeningHours');
+const { getOpeningHours, fix12 } = require('../src/getOpeningHours');
 
 const zooOpen = 'The zoo is open';
 const zooClosed = 'The zoo is closed';
@@ -55,6 +55,13 @@ describe('Testes da função getOpeningHours', () => {
 
   it('should throw an error for an invalid minutes range', () => {
     expect(() => getOpeningHours('Monday', '10:60-PM')).toThrow('The minutes must be between 0 and 59');
+  });
+
+  it('should convert 12 hours to 0 for opening and closing time', () => {
+    const result = fix12(12, 12, 12);
+    expect(result.h).toBe(0);
+    expect(result.o).toBe(0);
+    expect(result.c).toBe(0);
   });
 
   it('should handle 12:00-AM as midnight (0:00)', () => {

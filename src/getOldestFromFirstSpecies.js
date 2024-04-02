@@ -2,7 +2,7 @@ const data = require('../data/zoo_data');
 
 const getOldestFromFirstSpecies = (id) => {
   const employerFound = data.employees.find((employer) => employer.id === id);
-  if (!employerFound) return 'Funcionário não encontrado';
+  if (!employerFound) return 'Funcionário não encontrado.';
   const firstSpecie = employerFound.responsibleFor[0];
   const specieFound = data.species.find((specie) => specie.id === firstSpecie);
 

@@ -167,18 +167,7 @@ module.exports = {
       popularity: 3,
       location: 'SW',
       availability: ['Sunday', 'Saturday', 'Friday', 'Thursday'],
-      residents: [
-        {
-          name: 'Paulette',
-          sex: 'female',
-          age: 5,
-        },
-        {
-          name: 'Bill',
-          sex: 'male',
-          age: 6,
-        },
-      ],
+      residents: [],
     },
     {
       id: elephantsId,

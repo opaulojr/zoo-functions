@@ -9,13 +9,19 @@ describe('5 - Implemente a função `countAnimals` que contabiliza a quantidade 
       penguins: 4,
       otters: 4,
       frogs: 2,
-      snakes: 2,
+      snakes: 0,
       elephants: 4,
       giraffes: 6,
     };
     const actual = countAnimals();
 
     expect(actual).toStrictEqual(expected);
+  });
+
+  it('lança um erro ao receber uma espécie inexistente como parâmetro', () => {
+    expect(() => {
+      countAnimals({ species: 'nonexistent_species' });
+    }).toThrow('Espécie inexistente');
   });
 
   it('recebendo como parâmetro um objeto com a chave \'species\', retorna a quantidade de animais daquela espécie', () => {

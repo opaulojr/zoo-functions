@@ -62,7 +62,7 @@ describe('14 - Implemente a função `getAnimalMap` para fazer o mapeamento geog
       ],
       SW: [
         { frogs: ['Cathey', 'Annice'] },
-        { snakes: ['Paulette', 'Bill'] },
+        { snakes: [] },
       ],
     };
 
@@ -88,7 +88,7 @@ describe('14 - Implemente a função `getAnimalMap` para fazer o mapeamento geog
         { otters: ['Lloyd', 'Margherita', 'Mercedes', 'Neville'] },
       ],
       SW: [
-        { frogs: ['Annice', 'Cathey'] }, { snakes: ['Bill', 'Paulette'] },
+        { frogs: ['Annice', 'Cathey'] }, { snakes: [] },
       ],
     };
 
@@ -115,7 +115,7 @@ describe('14 - Implemente a função `getAnimalMap` para fazer o mapeamento geog
       ],
       SW: [
         { frogs: ['Cathey', 'Annice'] },
-        { snakes: ['Paulette'] },
+        { snakes: [] },
       ],
     };
 
@@ -142,7 +142,7 @@ describe('14 - Implemente a função `getAnimalMap` para fazer o mapeamento geog
       ],
       SW: [
         { frogs: ['Annice', 'Cathey'] },
-        { snakes: ['Paulette'] },
+        { snakes: [] },
       ],
     };
 
