@@ -1,5 +1,9 @@
 # Zoo Functions Project
 
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+
+## About
+
 This is my 9th project during my journey at Trybe!
 
 I was responsible for developing functions that retrieve information about the zoo animals such as species and place of origin, as well as fetching data about the people who collaborate with the maintenance and care of the zoo. The idea is to use `ES6` and `Higher Order Functions` to organize the information of a zoo. The entire project was structured in a way to provide a test-driven development experience `TDD` ensuring quality code! 🐘
